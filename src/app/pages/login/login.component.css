@@ -22,8 +22,6 @@ button {
 img {
   width: 60%;
   height: auto;
-  position: absolute;
-  top: 0;
 }
 
 .parent {
@@ -163,6 +161,10 @@ img {
 
 .social-icons {
   margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .toggle-container {
@@ -229,4 +231,32 @@ img {
 
 .container.active .toggle-right {
   transform: translateX(200%);
+}
+
+/* Añadir estilos responsivos */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    min-height: 550px;
+  }
+
+  .toggle-container {
+    display: none;
+  }
+
+  .sign-in,
+  .sign-up {
+    width: 100%;
+    left: 0;
+    transform: none;
+  }
+
+  .container.active .sign-in,
+  .container.active .sign-up {
+    transform: none;
+  }
+
+  .toggle {
+    display: none;
+  }
 }
