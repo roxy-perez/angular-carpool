@@ -1,29 +1,30 @@
 <div class="parent">
   <div class="container" id="container" [ngClass]="{'active': isSignDivVisible}">
     <div class="form-container sign-up">
-      <form>
+      <form (ngSubmit)="onSignUp()">
         <div class="logo-container">
           <img class="logo" src="logo.svg" alt="Canary Car Share">
           <h1>Registrarse</h1>
         </div>
-        <input type="text" name="name" placeholder="Nombre">
-        <input type="text" name="surname" placeholder="Apellidos">
-        <input type="email" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Contraseña">
-        <input type="password" name="password" placeholder="Confirma tu contraseña">
-        <button>Registrarse</button>
+        <input type="text" name="name" [(ngModel)]="signUp.name" placeholder="Nombre completo" required>
+        <input type="email" name="email" [(ngModel)]="signUp.email" placeholder="Email" required>
+        <input type="phone" name="phone_number" [(ngModel)]="signUp.phone_number" placeholder="Teléfono" required>
+        <input type="password" name="password" [(ngModel)]="signUp.password" placeholder="Contraseña" required>
+        <input type="password" name="password_confirmation" [(ngModel)]="signUp.password_confirmation"
+          placeholder="Confirma tu contraseña" required>
+        <button type="submit">Registrarse</button>
       </form>
     </div>
     <div class="form-container sign-in">
-      <form>
+      <form (ngSubmit)="onSignIn()">
         <div class="logo-container">
           <img class="logo" src="logo.svg" alt="Canary Car Share">
           <h1>Iniciar sesión</h1>
         </div>
-        <input type="email" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Contraseña">
+        <input type="email" name="email" [(ngModel)]="signIn.email" placeholder="Email">
+        <input type="password" name="password" [(ngModel)]="signIn.password" placeholder="Contraseña">
         <a href="#">→ ¿Has olvidado tu contraseña? ←</a>
-        <button>Iniciar sesión</button>
+        <button type="submit">Iniciar sesión</button>
       </form>
     </div>
     <div class="toggle-container">
