@@ -10,3 +10,11 @@
 body {
   font-family: 'Red Hat Mono', monospace;
 }
+
+.divider-gradient {
+  height: 2px;
+  background: linear-gradient(to right, #c9d6ff, #ffd700);
+  border-radius: 50%;
+  border: 0;
+  margin: 20px 0;
+}

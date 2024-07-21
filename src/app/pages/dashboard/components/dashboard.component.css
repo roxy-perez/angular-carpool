@@ -1,0 +1,53 @@
+* {
+  font-family: 'Averia Serif Libre', cursive;
+}
+
+h1 {
+  font-family: 'Agbalumo', cursive;
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.dashboard {
+  padding: 20px;
+  text-align: center;
+  background-color: #c9d6ff;
+  background: linear-gradient(to right, #e2e2e2, #ffd700);
+  height: 100vh;
+}
+
+.dashboard-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card {
+  background-color: #003da5;
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  padding: 20px;
+  width: 45%;
+}
+
+.card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.card li {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.card li strong {
+  display: inline-block;
+  width: 90px;
+}

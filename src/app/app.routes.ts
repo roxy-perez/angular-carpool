@@ -1,12 +1,15 @@
 import { Routes } from '@angular/router';
+import { LoginContainer } from './pages/login/containers/login.container';
+import { DashboardContainer } from './pages/dashboard/containers/dashboard.container';
 import { LayoutComponent } from './shared/layout/layout.component';
-import { LoginComponent } from './pages/login/login.component';
 
 export const routes: Routes = [
   {
     path: '', component: LayoutComponent, children: [
-      { path: '', component: LoginComponent },
-      { path: 'login', component: LoginComponent }
+      { path: 'login', component: LoginContainer },
+      { path: 'dashboard', component: DashboardContainer },
+      { path: '', redirectTo: 'login', pathMatch: 'full' }
     ]
   }
+
 ];

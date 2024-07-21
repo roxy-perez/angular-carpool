@@ -1,0 +1,29 @@
+<div class="dashboard">
+  <h1>Home</h1>
+
+  <div *ngIf="dashboardData" class="dashboard-content">
+    <!-- Sección de Rides -->
+    <div class="card">
+      <h2><fa-icon [icon]="faCar"></fa-icon> Viajes cerca de ti</h2>
+      <ul>
+        <li *ngFor="let ride of dashboardData.rides">
+          <strong>Driver:</strong> {{ ride.user.first_name }} {{ ride.user.last_name }}<br>
+          <hr class="divider-gradient"><i class="fas fa-star"></i>
+          <strong>Start Time:</strong> {{ ride.travel_start_time | date: 'short' }}
+        </li>
+      </ul>
+    </div>
+
+    <!-- Sección de Users -->
+    <div class="card">
+      <h2><fa-icon [icon]="faUsers"></fa-icon> Usuarios Recientes</h2>
+      <ul>
+        <li *ngFor="let user of dashboardData.users">
+          <strong>Name:</strong> {{ user.first_name }} {{ user.last_name }}<br>
+          <hr class="divider-gradient">
+          <strong>Email:</strong> {{ user.email }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
